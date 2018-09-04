@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Tab from './components/Tab';
+import TabSection from './components/TabSection';
 import TabButton from './components/TabButton';
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Tab tabs={this.tabs}></Tab>
+        <TabSection tabs={this.tabs}></TabSection>
       </div>
     );
   }

@@ -7,7 +7,7 @@ const style = {
   borderColor: "#a3a3a3",
 };
 
-class Tab extends React.Component{
+class TabSection extends React.Component{
   render(){
     return(
       <div style={style}>
@@ -17,4 +17,4 @@ class Tab extends React.Component{
   };
 };
 
-export default Tab;
+export default TabSection;
