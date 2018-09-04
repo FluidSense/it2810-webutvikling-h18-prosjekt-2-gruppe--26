@@ -1,8 +1,8 @@
 import React from 'react';
 
 const defaultStyle = {
-    minWidth: '30px',
-    minHeight: '30px',
+    minWidth: '31px',
+    minHeight: '31px',
 }
 
 
