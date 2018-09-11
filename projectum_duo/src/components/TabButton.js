@@ -3,7 +3,7 @@ import React from 'react';
 class TabButton extends React.Component{
   render(){
     return(
-      <button class="tabButton" style={this.props.style}>{this.props.tabName}</button>
+      <button id={this.props.id} className={this.props.selected? "chosenTabButton" : "tabButton"} style={this.props.style} onClick={this.props.clickFunction}>{this.props.tabName}</button>
     );
   };
 };
