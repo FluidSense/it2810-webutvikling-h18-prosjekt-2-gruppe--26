@@ -1,28 +1,68 @@
 .App {
   text-align: center;
+
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/*SHOWCASE*/
+.boxWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -40px;
+  margin-right: -40px;
+}
+.mainImage {
+}
+.showcaseBox {
+  height: 450px;
+}
+.showcaseText {
+  max-width: 400px;
+
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+
+/*RESPONSIVENESS*/
+/* Laptops, Desktops. Large devices. */
+@media only screen and (max-width: 1200px) {
+  .mainImage{
+  }
+  .showcaseBox{
+    background-color: red;
+  }
+
+  .boxWrapper{
+    flex-direction: row;
+  }
 }
 
-.App-title {
-  font-size: 1.5em;
+/* Mediumsized devices. Tablets, etc. */
+@media only screen and (max-width:  950px) {
+  .mainImage{
+  }
+
+  .showcaseBox{
+    background-color: green;
+  }
+
+  .boxWrapper{
+    flex-direction: row;
+  }
 }
 
-.App-intro {
-  font-size: large;
-}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* Phones */
+@media only screen and (max-width: 600px) {
+  .mainImage{
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .showcaseBox{
+    flex-direction: column;
+    background-color: blue;
+  }
+
+  .boxWrapper{
+    flex-direction: column;
+  }
 }
