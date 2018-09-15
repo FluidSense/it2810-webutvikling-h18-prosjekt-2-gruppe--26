@@ -8,12 +8,17 @@ import TabButton from './components/TabButton';
 
 class App extends Component {
 
-
+  tabs = [
+    <TabButton tabName="Poop"></TabButton>,
+    <TabButton tabName="Schnoop"></TabButton>,
+    <TabButton tabName="verylongtabname"></TabButton>
+  ]
 
   render() {
       return (
           <div className="App">
             <TabSection tabs={this.tabs} />
+
             <ApiCall apiUrl="poems.json"/>
           </div>
       );
