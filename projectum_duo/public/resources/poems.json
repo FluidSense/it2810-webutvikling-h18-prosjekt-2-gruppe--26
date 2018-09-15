@@ -1,7 +1,17 @@
 {
-  "poems": [
-    {"id": 1, "name": "poem1", "1": "Poem 1, line 1, word 1", "2": "Poem 1, line 2, word 2", "3": "Poem 1, line 3, word 3"},
-    {"id": 2, "name": "poem2", "1": "Poem 2, line 1, word 1", "2": "Poem 2, line 2, word 2", "3": "Poem 2, line 3, word 3"},
-    {"id": 3, "name": "poem3", "1": "Poem 3, line 1, word 1", "2": "Poem 3, line 2, word 2", "3": "Poem 3, line 3, word 3"}
-  ]
+  "poem1": {
+    "1": "Poem 1, line 1, word 1",
+    "2": "Poem 1, line 2, word 2",
+    "3": "Poem 1, line 3, word 3",
+  },
+  "poem2": {
+    "1": "Poem 2, line 1, word 1",
+    "2": "Poem 2, line 2, word 2",
+    "3": "Poem 2, line 3, word 3",
+  },
+  "poem3": {
+    "1": "Poem 3, line 1, word 1",
+    "2": "Poem 3, line 2, word 2",
+    "3": "Poem 3, line 3, word 3",
+  },
 }
