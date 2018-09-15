@@ -1,5 +1,4 @@
 import React from 'react';
-import TabButton from './TabButton';
 
 const style = {
   backgroundColor: "#e3e3e3",
@@ -13,7 +12,6 @@ class TabSection extends React.Component{
     return(
       <div style={style}>
         {this.props.tabs}
-        <TabButton tabName="+"></TabButton>
       </div>
     );
   };
