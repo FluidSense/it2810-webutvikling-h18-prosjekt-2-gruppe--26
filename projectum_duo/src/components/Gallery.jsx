@@ -8,7 +8,7 @@ class Gallery extends Component {
     return (
       <div className="boxWrapper">
         <Showcasebox />
-        <Showcasetext />
+        <Showcasetext text="Swiggity Swooty Here come dat Booty" name="Horsie" />
       </div>
     )
   }

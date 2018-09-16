@@ -9,8 +9,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -40px;
-  margin-right: -40px;
 }
 .mainImage {
 }
@@ -84,5 +82,17 @@ body {
 
   .boxWrapper{
     flex-direction: column;
+    margin-left: 50px;
+  }
+  .tabButton, .chosenTabButton{
+    font-size: 10px;
+    padding: 15px 2px;
+  }
+  #root > div > header > div:nth-child(1){
+    display: flex;
+    position: absolute;
+    flex-direction:column;
+    width:50px;
+    min-height: 100%;
   }
 }
