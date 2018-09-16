@@ -11,7 +11,7 @@ class Showcasebox extends Component {
       <div style={centeredBox} className="showcaseBox">
         <img className="mainImage" src="/horse.png" alt="horse"/>
       </div>
-      
+
     );
   }
 }
