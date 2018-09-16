@@ -7,8 +7,8 @@ class Gallery extends Component {
   render(){
     return (
       <div className="boxWrapper">
-        <Showcasebox  />
-        <Showcasetext name="Horsie" />
+        <Showcasebox />
+        <Showcasetext />
       </div>
     )
   }
