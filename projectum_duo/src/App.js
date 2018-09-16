@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Gallery from './components/Gallery.jsx'
 
 import TabSection from './components/TabSection';
 import TabButton from './components/TabButton';
@@ -14,7 +14,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <TabSection tabs={this.tabs}></TabSection>
+        <header className="App-header">
+          <TabSection tabs={this.tabs}></TabSection>
+          <Gallery />
+        </header>
       </div>
     );
   }

@@ -1,3 +1,27 @@
+.App {
+  text-align: center;
+}
+body {
+  margin: 0;
+}
+/*SHOWCASE*/
+.boxWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -40px;
+  margin-right: -40px;
+}
+.mainImage {
+}
+.showcaseBox {
+}
+
+.showcaseText {
+  max-width: 400px;
+}
+
+/* TABS */
 .tabButton, .chosenTabButton{
   background-color: #bfbfbf;
   float: left;
@@ -16,4 +40,49 @@
 
 .chosenTabButton {
   background-color: #d2d2d2;
+}
+
+/*RESPONSIVENESS*/
+/* Laptops, Desktops. Large devices. */
+@media only screen and (max-width: 1200px) {
+  .mainImage{
+  }
+  .showcaseBox{
+    background-color: red;
+  }
+
+  .boxWrapper{
+    flex-direction: row;
+  }
+}
+
+/* Mediumsized devices. Tablets, etc. */
+@media only screen and (max-width:  950px) {
+  .mainImage{
+  }
+
+  .showcaseBox{
+    background-color: green;
+  }
+
+  .boxWrapper{
+    flex-direction: row;
+  }
+}
+
+
+/* Phones */
+@media only screen and (max-width: 600px) {
+  .mainImage{
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .showcaseBox{
+    flex-direction: column;
+    background-color: blue;
+  }
+
+  .boxWrapper{
+    flex-direction: column;
+  }
 }
