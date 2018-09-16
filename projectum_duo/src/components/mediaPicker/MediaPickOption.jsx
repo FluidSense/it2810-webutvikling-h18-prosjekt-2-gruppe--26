@@ -1,5 +1,5 @@
 import React from 'react';
-import Checkbox from '../../Parts/Checkbox.jsx';
+import Checkbox from '../../parts/Checkbox.jsx';
 
 const pickOptionStyle = {
     display: 'flex',
