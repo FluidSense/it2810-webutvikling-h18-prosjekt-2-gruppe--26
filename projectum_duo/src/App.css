@@ -1,8 +1,9 @@
 .App {
   text-align: center;
-
 }
-
+body {
+  margin: 0;
+}
 /*SHOWCASE*/
 .boxWrapper{
   display: flex;
@@ -15,11 +16,31 @@
 }
 .showcaseBox {
 }
+
 .showcaseText {
   max-width: 400px;
-
 }
 
+/* TABS */
+.tabButton, .chosenTabButton{
+  background-color: #bfbfbf;
+  float: left;
+  border: 1px;
+  border-radius: 15px 5px 15px 5px;
+  cursor: pointer;
+  padding: 14px 16px;
+  margin: 5px 2px 5px 2px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tabButton:hover{
+  background-color: #a3a3a3;
+}
+
+.chosenTabButton {
+  background-color: #d2d2d2;
+}
 
 /*RESPONSIVENESS*/
 /* Laptops, Desktops. Large devices. */
