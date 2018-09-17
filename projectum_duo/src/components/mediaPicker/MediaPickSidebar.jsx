@@ -3,28 +3,28 @@ import MediaPicker from './MediaPicker';
 
 const selection1 = {
     title: 'Image',
-    options: [
-        'Test1',
-        'Test2',
-        'Test3',
+    categoryOptions: [
+        'img1',
+        'img2',
+        'img3',
     ],
 }
 
 const selection2 = {
-    title: 'Sound',
-    options: [
-        'Test4',
-        'Test5',
-        'Test6',
+    title: 'Text',
+    categoryOptions: [
+        'txt1',
+        'txt2',
+        'txt3',
     ],
 }
 
 const selection3 = {
-    title: 'Text',
-    options: [
-        'Test7',
-        'Test8',
-        'Test9',
+    title: 'Audio',
+    categoryOptions: [
+        'aud1',
+        'aud2',
+        'aud3',
     ],
 }
 
@@ -33,13 +33,14 @@ export default class MediaPickSidebar extends React.Component {
 
     createSidebar() {
         let mediaPickers = []
-        for(const objectNr in this.parts) {
-            let object = this.parts[objectNr];
+        for(const typeNr in this.parts) {
+            let type = this.parts[typeNr];
+
             mediaPickers.push(
                 <MediaPicker
-                    key={objectNr}
-                    title={object.title}
-                    options={object.options}
+                    key={typeNr}
+                    title={type.title}
+                    categoryOptions={type.categoryOptions}
                     reportActiveId={this.props.reportActiveId}
                 />
             );
