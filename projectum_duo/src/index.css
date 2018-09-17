@@ -1,4 +1,18 @@
+html {
+  height: 100%;
+  width: 100%;
+}
 body {
+  height: inherit;
+  width: auto;
   font-family: 'Montserrat', sans-serif;
-  background: antiquewhite
+  background-image: url('/background.jpg') ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+#root {
+  height:inherit;
+  width: auto;
 }

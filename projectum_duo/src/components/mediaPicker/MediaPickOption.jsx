@@ -11,9 +11,9 @@ export default class MediaPickOption extends React.Component {
     render() {
         return (
             <div style={pickOptionStyle}>
-                <Checkbox 
-                    active={this.props.active} 
-                    clickFunction={this.props.clickFunction} 
+                <Checkbox
+                    active={this.props.active}
+                    clickFunction={this.props.clickFunction}
                     id={this.props.id}
                 />
                 <p style={{display:'inline'}}>{this.props.title}</p>

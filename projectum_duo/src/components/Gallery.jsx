@@ -68,7 +68,7 @@ class Gallery extends Component {
     try {
       json ? GetJSON(this, url) : GetRaw(this, url);
       this.setState({fetchedItem:{itemType, item}});
-    } 
+    }
     catch(e) {
       console.warn('Could not get items. Error message: ' + e);
     }
@@ -105,10 +105,13 @@ class Gallery extends Component {
       )
     }
     return (
-      <div className="boxWrapper">
-        <Showcasebox />
-        <Showcasetext />
+      <React.Fragment>
+          <div className="sidebarBack"></div>
+          <div className="boxWrapper">
+          <Showcasebox />
+          <Showcasetext text="Swiggity Swooty Here come dat Booty" name="Horsie" />
       </div>
+    </React.Fragment>
     );
   }
 }

@@ -4,7 +4,7 @@ import MediaPickOption from './MediaPickOption';
 const mediaPickerStyle = {
     display: 'flex',
     flexDirection: 'column',
-    textAlign: 'left',
+    marginRight: '20px',
 }
 
 export default class MediaPicker extends React.Component {
@@ -29,9 +29,9 @@ export default class MediaPicker extends React.Component {
         for(let option in this.props.options){
             let thisId =/* this.props.title + "_" + */this.props.options[option];
             mediaPickOptions.push(
-                <MediaPickOption 
+                <MediaPickOption
                     id={this.props.options[option]}
-                    key={option} 
+                    key={option}
                     title={this.props.options[option]}
                     clickFunction={this.handleClick.bind(this)}
                     active={this.state.activeID === thisId}
@@ -42,10 +42,10 @@ export default class MediaPicker extends React.Component {
 
     render(){
         return (
-            <div style={mediaPickerStyle}>
-                <h3>{this.props.title}</h3>
-                {this.createMediaPickOptions()}
-            </div>
+          <div style={mediaPickerStyle}>
+              <h3>{this.props.title}</h3>
+              {this.createMediaPickOptions()}
+          </div>
         );
     }
 }

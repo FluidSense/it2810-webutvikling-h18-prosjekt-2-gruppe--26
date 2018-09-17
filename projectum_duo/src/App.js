@@ -39,7 +39,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <TabSection selectedTab={this.state.selectedTab} tabs={this.tabs} handleClick={this.handleClick.bind(this)} />
-          <MediaPickSideBar reportActiveId={this.trackAllActiveSelections} />
+          <div className="wrapper2"><MediaPickSideBar reportActiveId={this.trackAllActiveSelections} /></div>
           {/* Pass current tab and selected items to gallery for rendering */}
           <Gallery tab={this.state.selectedTab} selectedItems={this.state.mediaSelections[this.state.selectedTab]}/>
         </header>

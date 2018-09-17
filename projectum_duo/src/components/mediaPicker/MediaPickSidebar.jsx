@@ -2,7 +2,7 @@ import React from 'react';
 import MediaPicker from './MediaPicker';
 
 const selection1 = {
-    title: 'TestHeader1',
+    title: 'Image',
     options: [
         'Test1',
         'Test2',
@@ -11,7 +11,7 @@ const selection1 = {
 }
 
 const selection2 = {
-    title: 'TestHeader2',
+    title: 'Sound',
     options: [
         'Test4',
         'Test5',
@@ -19,17 +19,26 @@ const selection2 = {
     ],
 }
 
+const selection3 = {
+    title: 'Text',
+    options: [
+        'Test7',
+        'Test8',
+        'Test9',
+    ],
+}
+
 export default class MediaPickSidebar extends React.Component {
-    parts = [selection1, selection2];
+    parts = [selection1, selection2, selection3];
 
     createSidebar() {
         let mediaPickers = []
         for(const objectNr in this.parts) {
             let object = this.parts[objectNr];
             mediaPickers.push(
-                <MediaPicker 
+                <MediaPicker
                     key={objectNr}
-                    title={object.title} 
+                    title={object.title}
                     options={object.options}
                     reportActiveId={this.props.reportActiveId}
                 />
@@ -45,5 +54,5 @@ export default class MediaPickSidebar extends React.Component {
             </React.Fragment>
         );
     }
-    
+
 }
