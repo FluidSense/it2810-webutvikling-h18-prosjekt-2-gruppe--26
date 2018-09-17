@@ -10,16 +10,16 @@ export const GetJSON = (object, url, stateName='apiResult') => {
         }
     })
     .then(
-        response => object.setState({stateName: response})
+        response => object.setState({[stateName]: response})
     );
 }
 
 export const GetRaw = (object, url, stateName='apiResult') => {
     fetch(url)
     .then( response => response.status === 200 ? response.text() : console.warn('API Call failed. Status code ' + response.status))
-    .then( response => object.setState({stateName: response}));
+    .then( response => object.setState({[stateName]: response}));
 }
 
 export const APIResultInState = (object, stateName='apiResult') => {
-    return object.state && object.state.hasOwnProperty(stateName);
+    return object.state && object.state.hasOwnProperty(stateName) && typeof object.state[stateName] !== 'undefined';
 }
