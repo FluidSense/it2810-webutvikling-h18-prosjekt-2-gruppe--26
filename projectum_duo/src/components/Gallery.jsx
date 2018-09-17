@@ -85,6 +85,9 @@ class Gallery extends Component {
           break;
         }
       }
+      if(key === 'undefined') {
+        console.error('Options should be Image, Text or Sound. Cannot display resource w/ wrong title.');
+      }
     }
   }
 
