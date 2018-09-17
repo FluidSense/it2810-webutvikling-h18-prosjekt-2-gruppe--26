@@ -35,7 +35,6 @@ export default class MediaPickSidebar extends React.Component {
 
     createSidebar() {
         let mediaPickers = []
-        console.log(this.props.tabCache);
         for(const objectNr in this.parts) {
             let object = this.parts[objectNr];
             mediaPickers.push(
