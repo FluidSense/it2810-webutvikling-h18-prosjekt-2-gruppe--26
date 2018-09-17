@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import Showcasebox from '../parts/Showcasebox.jsx'
-import Showcasetext from '../parts/Showcasetext.jsx'
+import React, {Component} from 'react';
+import Showcasebox from '../parts/Showcasebox.jsx';
+import Showcasetext from '../parts/Showcasetext.jsx';
 import {imgUrls, textUrls, soundUrls} from '../constants.js';
 import {GetJSON, GetRaw, APIResultInState} from '../api/core.js';
 
@@ -27,28 +27,35 @@ class Gallery extends Component {
     return cache;
   }
 
-  componentDidUpdate(newProps) {
+  componentDidUpdate(prevProps) {
+
+
     // If tab info is not cached, add to cache.
-    console.log('newProps: ', newProps);
-    if (!(newProps.tab in this.state.tabCache)) {
+    if (!(prevProps.tab in this.state.tabCache)) {
       const cache = Object.assign(this.state.tabCache);
-      cache[newProps.tab] = newProps.selectedItems;
-      console.log('Incoming setState');
+      cache[prevProps.tab] = prevProps.selectedItems;
       this.setState({tabCache:cache});
     }
 
     // If uncached item were fetched, add to cache.
     if (APIResultInState(this) && 'fetchedItem' in this.state) {
       const cache = Object.assign(this.state.resourceCache);
-      cache[this.state.fetchedItem.itemType.item] = this.state.apiresult;
+      cache[this.state.fetchedItem.itemType][this.state.fetchedItem.item] = this.state.apiResult;
+      this.setState({resourceCache:cache, apiResult:undefined, fetchedItem:undefined});
     }
 
-    if(!this.isSelectedItemsEqualOnUpdate(this.props.selectedItems, newProps.selectedItems)) {
+    if(!this.isSelectedItemsEqualOnUpdate(this.props.selectedItems, prevProps.selectedItems)) {
       this.checkCacheForItems();
     }
   }
 
-  isSelectedItemsEqualOnUpdate(oldSelected, newSelected) {
+  isSelectedItemsEqualOnUpdate(newSelected, oldSelected) {
+    const bothOrNoneUndefined = typeof newSelected !== 'undefined' ? typeof oldSelected !== 'undefined' : typeof oldSelected === 'undefined';
+
+    if (!bothOrNoneUndefined) {
+      return false;
+    }
+
     for (const key in newSelected) {
       if (!(oldSelected[key] === newSelected[key])) {
         return false;
@@ -73,9 +80,7 @@ class Gallery extends Component {
     for (const key in selectedItems) {
       // Prevent checking proto
       if (selectedItems.hasOwnProperty(key)) {
-        console.log(!(this.state.resourceCache[selectedItems[key]]));
         if (!(selectedItems[key] in this.state.resourceCache[key] && this.state.resourceCache[selectedItems[key]])) {
-          console.log('Getting uncached item');
           this.getUncachedItem(key, selectedItems[key], lists[key][selectedItems[key]], key === 'txt');
           break;
         }
@@ -88,12 +93,20 @@ class Gallery extends Component {
   render(){
     const selectedItems = this.props.selectedItems;
     const resourceCache = this.state.resourceCache;
+    if (selectedItems) {
+      return (
+        <div className="boxWrapper">
+          <Showcasebox img={resourceCache.img[selectedItems.img]}/>
+          <Showcasetext txt={resourceCache.txt[selectedItems.txt]}/>
+        </div>
+      )
+    }
     return (
       <div className="boxWrapper">
-        <Showcasebox img={resourceCache[selectedItems.img]}/>
-        <Showcasetext txt={resourceCache[selectedItems.txt]}/>
+        <Showcasebox />
+        <Showcasetext />
       </div>
-    )
+    );
   }
 }
 

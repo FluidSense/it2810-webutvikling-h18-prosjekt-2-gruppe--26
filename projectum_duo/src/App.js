@@ -28,7 +28,8 @@ class App extends Component {
   trackAllActiveSelections = (title, id) => {
     const newMediaSelections = Object.assign(this.state.mediaSelections);
     const activeTab = this.state.selectedTab;
-    activeTab in newMediaSelections ? newMediaSelections[activeTab][title] = id : newMediaSelections[activeTab] = {[title]:id};
+    const titleTranslations = {Image:'img',Text:'txt',Sound:'sound'};
+    activeTab in newMediaSelections ? newMediaSelections[activeTab][titleTranslations[title]] = id : newMediaSelections[activeTab] = {[titleTranslations[title]]:id};
     this.setState({mediaSelections:newMediaSelections});
   }
 
@@ -39,7 +40,8 @@ class App extends Component {
         <header className="App-header">
           <TabSection selectedTab={this.state.selectedTab} tabs={this.tabs} handleClick={this.handleClick.bind(this)} />
           <MediaPickSideBar reportActiveId={this.trackAllActiveSelections} />
-          <Gallery tab={this.state.selectedTab} selectedItems={{img:'img1',txt:'txt1'}}/>
+          {/* Pass current tab and selected items to gallery for rendering */}
+          <Gallery tab={this.state.selectedTab} selectedItems={this.state.mediaSelections[this.state.selectedTab]}/>
         </header>
       </div>
     );

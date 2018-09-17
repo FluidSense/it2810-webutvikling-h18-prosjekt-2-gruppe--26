@@ -27,10 +27,10 @@ export default class MediaPicker extends React.Component {
     createMediaPickOptions(){
         let mediaPickOptions = [];
         for(let option in this.props.options){
-            let thisId = this.props.title + "_" + this.props.options[option];
+            let thisId =/* this.props.title + "_" + */this.props.options[option];
             mediaPickOptions.push(
                 <MediaPickOption 
-                    id={thisId}
+                    id={this.props.options[option]}
                     key={option} 
                     title={this.props.options[option]}
                     clickFunction={this.handleClick.bind(this)}
