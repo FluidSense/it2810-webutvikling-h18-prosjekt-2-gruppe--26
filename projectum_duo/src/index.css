@@ -1,4 +1,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  background: antiquewhite
+  background-image: url('/background.jpg') ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
