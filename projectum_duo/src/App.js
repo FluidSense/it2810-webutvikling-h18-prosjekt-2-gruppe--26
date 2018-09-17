@@ -13,10 +13,7 @@ class App extends Component {
       mediaSelections: {},
     }
   }
-  tabs = [
-    <TabButton tabName="Poop"></TabButton>,
-    <TabButton tabName="Schnoop"></TabButton>
-  ]
+
 
   handleClick(e) {
     let id = parseInt(e.target.id,10);
@@ -38,7 +35,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <TabSection selectedTab={this.state.selectedTab} tabs={this.tabs} handleClick={this.handleClick.bind(this)} />
+          <TabSection selectedTab={this.state.selectedTab} handleClick={this.handleClick.bind(this)} />
           <div className="wrapper2"><MediaPickSideBar reportActiveId={this.trackAllActiveSelections} /></div>
           {/* Pass current tab and selected items to gallery for rendering */}
           <Gallery tab={this.state.selectedTab} selectedItems={this.state.mediaSelections[this.state.selectedTab]}/>
