@@ -7,14 +7,12 @@ class Gallery extends Component {
   render(){
     return (
       <React.Fragment>
-                  <div className="sidebarBack"></div>
-        <div className="boxWrapper">
-
+          <div className="sidebarBack"></div>
+          <div className="boxWrapper">
           <div className="wrapper2"><MediaPickSidebar /></div>
           <Showcasebox />
           <Showcasetext text="Swiggity Swooty Here come dat Booty" name="Horsie" />
-        </div>
-
+      </div>
       </React.Fragment>
     )
   }

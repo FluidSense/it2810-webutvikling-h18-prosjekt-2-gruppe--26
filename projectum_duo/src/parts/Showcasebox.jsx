@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const centeredBox = {
-  margin: '40px',
+  margin: '20px',
   border: '5px solid black',
 };
 
