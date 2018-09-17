@@ -79,7 +79,7 @@ class Gallery extends Component {
     const lists = {img:imgUrls,txt:textUrls,sound:soundUrls};
     for (const key in selectedItems) {
       // Prevent checking proto
-      if (selectedItems.hasOwnProperty(key)) {
+      if (selectedItems.hasOwnProperty(key) && key !== 'undefined') {
         if (!(selectedItems[key] in this.state.resourceCache[key] && this.state.resourceCache[selectedItems[key]])) {
           this.getUncachedItem(key, selectedItems[key], lists[key][selectedItems[key]], key === 'txt');
           break;
