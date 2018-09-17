@@ -1,5 +1,7 @@
 import React from 'react';
 import MediaPicker from './MediaPicker';
+import {titleTranslations} from './../../App.js';
+
 
 const selection1 = {
     title: 'Image',
@@ -33,6 +35,7 @@ export default class MediaPickSidebar extends React.Component {
 
     createSidebar() {
         let mediaPickers = []
+        console.log(this.props.tabCache);
         for(const objectNr in this.parts) {
             let object = this.parts[objectNr];
             mediaPickers.push(
@@ -41,6 +44,7 @@ export default class MediaPickSidebar extends React.Component {
                     title={object.title}
                     options={object.options}
                     reportActiveId={this.props.reportActiveId}
+                    selections={this.props.tabCache[this.props.activeTab] ? this.props.tabCache[this.props.activeTab][titleTranslations[object.title]] : undefined}
                 />
             );
         }

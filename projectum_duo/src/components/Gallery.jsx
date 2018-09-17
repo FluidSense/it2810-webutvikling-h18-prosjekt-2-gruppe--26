@@ -65,6 +65,10 @@ class Gallery extends Component {
   }
 
   getUncachedItem(itemType, item, url, json=false) {
+    if (typeof url === 'undefined' || url === 'undefined'){
+      console.warn('Faulty URL, probable cause: mismatch between allowed urls and option title.');
+      return;
+    }
     try {
       json ? GetJSON(this, url) : GetRaw(this, url);
       this.setState({fetchedItem:{itemType, item}});
