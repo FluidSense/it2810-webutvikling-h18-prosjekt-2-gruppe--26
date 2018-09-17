@@ -40,6 +40,7 @@ export default class MediaPickSidebar extends React.Component {
                     key={objectNr}
                     title={object.title}
                     options={object.options}
+                    reportActiveId={this.props.reportActiveId}
                 />
             );
         }

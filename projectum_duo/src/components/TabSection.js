@@ -18,33 +18,27 @@ class TabSection extends React.Component{
 
   tabTexts = [1];
 
-  handleClick(e) {
-    let id = parseInt(e.target.id,10);
-    this.setState({
-      selectedTab: id,
-    });
-  }
-
   handleAddTab() {
     this.tabTexts.push(this.tabTexts.length+1);
     this.forceUpdate();
   }
 
   createTabs () {
-    let tabs = []
+    const tabs = []
+    const selectedTab = 'selectedTab' in this.props ? this.props.selectedTab : this.state.selectedTab;
     for(const textNum in this.tabTexts) {
-        let thisId = this.tabTexts[textNum];
+        const thisId = this.tabTexts[textNum];
         tabs.push(
           <TabButton
             id={thisId}
             key={thisId}
             tabName={"Tab " + this.tabTexts[textNum]}
-            selected={this.state.selectedTab === thisId}
-            clickFunction={this.handleClick.bind(this)}
+            selected={selectedTab === thisId}
+            clickFunction={this.props.handleClick}
           />
         );
     }
-    tabs.push(<TabButton tabName="+" id="addTab" clickFunction={this.handleAddTab.bind(this)}/>)
+    tabs.push(<TabButton key={this.tabTexts.length+1} tabName="+" id="addTab" clickFunction={this.handleAddTab.bind(this)}/>)
 
     return tabs;
   }
