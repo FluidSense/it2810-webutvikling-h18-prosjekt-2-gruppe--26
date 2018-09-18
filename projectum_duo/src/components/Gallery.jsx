@@ -37,7 +37,6 @@ class Gallery extends Component {
       const subCategoryIndex = fetchedItem.item[1];
       const categoryCache = cache[fetchedItem.itemType];
       const newUrlObject = {[subCategoryIndex]:this.state.apiResult};
-      console.log('Updating ' + subCategoryName + ' with urlNr ' + subCategoryIndex);
       if (categoryCache && subCategoryName in categoryCache) {
         subCategoryIndex in categoryCache[subCategoryName] ? categoryCache[subCategoryName][subCategoryIndex] = this.state.apiResult : Object.assign(categoryCache[subCategoryName], newUrlObject);
       }
