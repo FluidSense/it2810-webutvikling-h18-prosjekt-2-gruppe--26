@@ -19,8 +19,8 @@ export const imgUrls = {
     animals: [
       animalsImgPath + 'fish.svg',
       animalsImgPath + 'flamingo.svg',
-      animalsImgPath + 'monkey.svg',
-      animalsImgPath + 'origami.svg',
+      animalsImgPath + 'animal.svg',
+      animalsImgPath + 'hedgehog.svg',
     ],
     flags: [
       flagsImgPath + 'iceland.svg',
