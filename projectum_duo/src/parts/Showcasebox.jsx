@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Soundplayer from './Soundplayer.jsx';
-
 
 const centeredBox = {
   margin: '20px',

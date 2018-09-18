@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import Gallery from './components/Gallery.jsx';
 import TabSection from './components/TabSection';
-import TabButton from './components/TabButton';
 import MediaPickSideBar from './components/mediaPicker/MediaPickSidebar';
+
+export const titleTranslations = {Image:'img',Text:'txt',Sound:'sound'};
+
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +27,6 @@ class App extends Component {
   trackAllActiveSelections = (title, id) => {
     const newMediaSelections = Object.assign(this.state.mediaSelections);
     const activeTab = this.state.selectedTab;
-    const titleTranslations = {Image:'img',Text:'txt',Sound:'sound'};
     activeTab in newMediaSelections ? newMediaSelections[activeTab][titleTranslations[title]] = id : newMediaSelections[activeTab] = {[titleTranslations[title]]:id};
     this.setState({mediaSelections:newMediaSelections});
   }
@@ -34,8 +35,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <TabSection selectedTab={this.state.selectedTab} handleClick={this.handleClick.bind(this)} />
-          <div className="wrapper2"><MediaPickSideBar reportActiveId={this.trackAllActiveSelections} /></div>
+          <TabSection selectedTab={this.state.selectedTab} handleClick={this.handleClick.bind(this)} />
+          <div className="wrapper2"><MediaPickSideBar reportActiveId={this.trackAllActiveSelections} tabCache={this.state.mediaSelections} activeTab={this.state.selectedTab}/></div>
           {/* Pass current tab and selected items to gallery for rendering */}
           <Gallery tab={this.state.selectedTab} selectedItems={this.state.mediaSelections[this.state.selectedTab]}/>
       </div>

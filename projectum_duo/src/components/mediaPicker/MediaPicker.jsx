@@ -34,7 +34,11 @@ export default class MediaPicker extends React.Component {
                     key={option}
                     title={this.props.options[option]}
                     clickFunction={this.handleClick.bind(this)}
-                    active={this.state.activeID === thisId}
+                    active={
+                        this.props.selections ?
+                            this.props.selections === thisId
+                            : false
+                        }
                 />);
         }
         return mediaPickOptions;

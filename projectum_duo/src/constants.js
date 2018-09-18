@@ -1,20 +1,80 @@
+const path = (path, subPath='') => './../resources/' + path + subPath;
+const imgPath = (category) => path('image/') + category;
+const soundPath = (category) => path('sound/') + category;
+const txtPath = (category) => path('text/') + category;
+
+const animalsImgPath = imgPath('animals/');
+const flagsImgPath = imgPath('flags/');
+const memesImgPath = imgPath('memes/');
+
+const animalsSoundPath = soundPath('animals/');
+const flagsSoundPath = soundPath('flags/');
+const memesSoundPath = soundPath('memes/');
+
+const animalsTxtPath = txtPath('animals/');
+const flagsTxtPath = txtPath('flags/');
+const memesTxtPath = txtPath('memes/');
+
 export const imgUrls = {
-    img1: 'url',
-    img2: 'url',
-    img3: 'url',
-    img4: 'url',
+    animals: [
+      animalsImgPath + 'fish.svg',
+      animalsImgPath + 'flamingo.svg',
+      animalsImgPath + 'monkey-facing-right.svg',
+      animalsImgPath + 'origami-bird.svg',
+    ],
+    flags: [
+      flagsImgPath + 'iceland.svg',
+      flagsImgPath + 'italy.svg',
+      flagsImgPath + 'norway.svg',
+      flagsImgPath + 'usa.svg',
+    ],
+    memes: [
+      memesImgPath + 'forever.svg',
+      memesImgPath + 'okay.svg',
+      memesImgPath + 'yaoming.svg',
+      memesImgPath + 'yuno.svg',
+    ],
   }
 
 export const textUrls = {
-    txt1: 'url',
-    txt2: 'url',
-    txt3: 'url',
-    txt4: 'url',
+    animals: [
+      animalsTxtPath + '',
+      animalsTxtPath + '',
+      animalsTxtPath + '',
+      animalsTxtPath + '',
+    ],
+    flags: [
+      flagsTxtPath + '',
+      flagsTxtPath + '',
+      flagsTxtPath + '',
+      flagsTxtPath + '',
+    ],
+    memes: [
+      memesTxtPath + '',
+      memesTxtPath + '',
+      memesTxtPath + '',
+      memesTxtPath + '',
+    ],
   }
 
 export const soundUrls = {
-    sound1: 'url',
-    sound2: 'url',
-    sound3: 'url',
-    sound4: 'url',
+    animals: [
+      animalsSoundPath + 'fish.mp3',
+      animalsSoundPath + 'flamingo.mp3',
+      animalsSoundPath + 'monkey.mp3',
+      animalsSoundPath + 'origami.mp3',
+    ],
+    flags: [
+      flagsSoundPath + 'italy.mp3',
+      flagsSoundPath + 'korea.mp3',
+      flagsSoundPath + 'norway.mp3',
+      flagsSoundPath + 'russia.mp3',
+    ],
+    memes: [
+      memesSoundPath + 'illuminati.mp3',
+      memesSoundPath + 'mlg.mp3',
+      memesSoundPath + 'profanity.mp3',
+      memesSoundPath + 'triple.3',
+    ],
   }
+
