@@ -38,22 +38,22 @@ export const imgUrls = {
 
 export const textUrls = {
     animals: [
-      animalsTxtPath + '',
-      animalsTxtPath + '',
-      animalsTxtPath + '',
-      animalsTxtPath + '',
+      animalsTxtPath + 'animals_1.json',
+      animalsTxtPath + 'animals_2.json',
+      animalsTxtPath + 'animals_3.json',
+      animalsTxtPath + 'animals_4.json',
     ],
     flags: [
-      flagsTxtPath + '',
-      flagsTxtPath + '',
-      flagsTxtPath + '',
-      flagsTxtPath + '',
+      flagsTxtPath + 'flas_1.json',
+      flagsTxtPath + 'flas_2.json',
+      flagsTxtPath + 'flas_3.json',
+      flagsTxtPath + 'flas_4.json',
     ],
     memes: [
-      memesTxtPath + '',
-      memesTxtPath + '',
-      memesTxtPath + '',
-      memesTxtPath + '',
+      memesTxtPath + 'memes_1.json',
+      memesTxtPath + 'memes_2.json',
+      memesTxtPath + 'memes_3.json',
+      memesTxtPath + 'memes_4.json',
     ],
   }
 
@@ -77,4 +77,3 @@ export const soundUrls = {
       memesSoundPath + 'triple.3',
     ],
   }
-
