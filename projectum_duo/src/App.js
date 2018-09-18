@@ -3,6 +3,7 @@ import './App.css';
 import Gallery from './components/Gallery.jsx';
 import TabSection from './components/TabSection';
 import MediaPickSideBar from './components/mediaPicker/MediaPickSidebar';
+import { cloneObject } from './utils';
 
 export const titleTranslations = {Image:'img',Text:'txt',Sound:'sound'};
 
@@ -24,10 +25,12 @@ class App extends Component {
     });
   }
 
-  trackAllActiveSelections = (title, id) => {
-    const newMediaSelections = Object.assign(this.state.mediaSelections);
+  // Tracks all selections across tabs to give tabs a memory of what you selected when changing between tabs.
+  trackAllActiveSelections = (title, id, int) => {
+    const { mediaSelections } = this.state
+    const newMediaSelections = cloneObject(mediaSelections);
     const activeTab = this.state.selectedTab;
-    activeTab in newMediaSelections ? newMediaSelections[activeTab][titleTranslations[title]] = id : newMediaSelections[activeTab] = {[titleTranslations[title]]:id};
+    activeTab in newMediaSelections ? newMediaSelections[activeTab][titleTranslations[title]] = [id, int] : newMediaSelections[activeTab] = {[titleTranslations[title]]:[id, int]};
     this.setState({mediaSelections:newMediaSelections});
   }
 

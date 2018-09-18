@@ -1,33 +1,21 @@
 import React from 'react';
 import MediaPicker from './MediaPicker';
 import {titleTranslations} from './../../App.js';
-
+import {imgUrls, textUrls, soundUrls} from './../../constants.js';
 
 const selection1 = {
     title: 'Image',
-    options: [
-        'Meme',
-        'Nation',
-        'Animal',
-    ],
+    options: Object.keys(imgUrls),
 }
 
 const selection2 = {
     title: 'Sound',
-    options: [
-        'Meme',
-        'Nation',
-        'Animal',
-    ],
+    options: Object.keys(soundUrls),
 }
 
 const selection3 = {
     title: 'Text',
-    options: [
-        'Meme',
-        'Nation',
-        'Animal',
-    ],
+    options: Object.keys(textUrls),
 }
 
 export default class MediaPickSidebar extends React.Component {
