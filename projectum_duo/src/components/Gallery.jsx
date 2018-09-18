@@ -107,16 +107,29 @@ class Gallery extends Component {
     }
   }
 
+  getSelectedFromCache(key) {
+    const cache = this.state.resourceCache;
+    const selectedItems = this.props.selectedItems;
+    if (selectedItems.hasOwnProperty(key) && key !== 'undefined') {
+      const subCategoryName = selectedItems[key][0];
+      const subCategoryIndex = selectedItems[key][1];
+      const categoryCache = cache[key];
+      if (categoryCache && subCategoryName in categoryCache && categoryCache[subCategoryName] && subCategoryIndex in categoryCache[subCategoryName]) {
+        return categoryCache[subCategoryName][subCategoryIndex];
+      }
+    }
+    return false;
+  }
+
 
 
   render(){
     const selectedItems = this.props.selectedItems;
-    const resourceCache = this.state.resourceCache;
     if (selectedItems) {
       return (
         <div className="boxWrapper">
-          <Showcasebox img={resourceCache.img[selectedItems.img]}/>
-          <Showcasetext txt={resourceCache.txt[selectedItems.txt]}/>
+          <Showcasebox img={this.getSelectedFromCache('img')}/>
+          <Showcasetext txt={this.getSelectedFromCache('txt')}/>
         </div>
       )
     }
