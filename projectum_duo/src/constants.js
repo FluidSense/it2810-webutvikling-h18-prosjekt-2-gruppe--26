@@ -44,10 +44,10 @@ export const textUrls = {
       animalsTxtPath + 'animals_4.json',
     ],
     flags: [
-      flagsTxtPath + 'flas_1.json',
-      flagsTxtPath + 'flas_2.json',
-      flagsTxtPath + 'flas_3.json',
-      flagsTxtPath + 'flas_4.json',
+      flagsTxtPath + 'flags_1.json',
+      flagsTxtPath + 'flags_2.json',
+      flagsTxtPath + 'flags_3.json',
+      flagsTxtPath + 'flags_4.json',
     ],
     memes: [
       memesTxtPath + 'memes_1.json',
