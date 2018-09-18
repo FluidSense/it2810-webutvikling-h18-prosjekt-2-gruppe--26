@@ -24,10 +24,10 @@ class App extends Component {
     });
   }
 
-  trackAllActiveSelections = (title, id) => {
+  trackAllActiveSelections = (title, id, int) => {
     const newMediaSelections = Object.assign(this.state.mediaSelections);
     const activeTab = this.state.selectedTab;
-    activeTab in newMediaSelections ? newMediaSelections[activeTab][titleTranslations[title]] = id : newMediaSelections[activeTab] = {[titleTranslations[title]]:id};
+    activeTab in newMediaSelections ? newMediaSelections[activeTab][titleTranslations[title]] = [id, int] : newMediaSelections[activeTab] = {[titleTranslations[title]]:[id, int]};
     this.setState({mediaSelections:newMediaSelections});
   }
 

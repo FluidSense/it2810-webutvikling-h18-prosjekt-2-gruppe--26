@@ -1,20 +1,20 @@
 export const imgUrls = {
-    img1: 'url',
-    img2: 'url',
-    img3: 'url',
-    img4: 'url',
+    img1: ['url1', 'url2','url3','url4'],
+    img2: ['url1', 'url2','url3','url4'],
+    img3: ['url1', 'url2','url3','url4'],
+    img4: ['url1', 'url2','url3','url4'],
   }
 
 export const textUrls = {
-    txt1: 'url',
-    txt2: 'url',
-    txt3: 'url',
-    txt4: 'url',
+    txt1: ['url1', 'url2','url3','url4'],
+    txt2: ['url1', 'url2','url3','url4'],
+    txt3: ['url1', 'url2','url3','url4'],
+    txt4: ['url1', 'url2','url3','url4'],
   }
 
 export const soundUrls = {
-    sound1: 'url',
-    sound2: 'url',
-    sound3: 'url',
-    sound4: 'url',
+    sound1: ['url1', 'url2','url3','url4'],
+    sound2: ['url1', 'url2','url3','url4'],
+    sound3: ['url1', 'url2','url3','url4'],
+    sound4: ['url1', 'url2','url3','url4'],
   }
