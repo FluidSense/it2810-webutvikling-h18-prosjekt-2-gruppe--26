@@ -1,8 +1,9 @@
 html {
-  height: 100%;
-  width: 100%;
+  height:100vmax;
+  width:100%;
 }
 body {
+  margin: 0;
   height: inherit;
   width: auto;
   font-family: 'Montserrat', sans-serif;

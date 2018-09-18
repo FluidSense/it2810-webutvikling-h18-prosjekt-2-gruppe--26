@@ -4,27 +4,27 @@ import MediaPicker from './MediaPicker';
 const selection1 = {
     title: 'Image',
     options: [
-        'Test1',
-        'Test2',
-        'Test3',
+        'Meme',
+        'Nation',
+        'Animal',
     ],
 }
 
 const selection2 = {
     title: 'Sound',
     options: [
-        'Test4',
-        'Test5',
-        'Test6',
+        'Meme',
+        'Nation',
+        'Animal',
     ],
 }
 
 const selection3 = {
     title: 'Text',
     options: [
-        'Test7',
-        'Test8',
-        'Test9',
+        'Meme',
+        'Nation',
+        'Animal',
     ],
 }
 

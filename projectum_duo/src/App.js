@@ -34,12 +34,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <TabSection selectedTab={this.state.selectedTab} handleClick={this.handleClick.bind(this)} />
+        <TabSection selectedTab={this.state.selectedTab} handleClick={this.handleClick.bind(this)} />
           <div className="wrapper2"><MediaPickSideBar reportActiveId={this.trackAllActiveSelections} /></div>
           {/* Pass current tab and selected items to gallery for rendering */}
           <Gallery tab={this.state.selectedTab} selectedItems={this.state.mediaSelections[this.state.selectedTab]}/>
-        </header>
       </div>
     );
   }
