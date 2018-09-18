@@ -9,7 +9,7 @@ const centeredBox = {
 class Showcasebox extends Component {
   render() {
     if(this.props.img) {
-      return (<div className="usedImage" style={centeredBox} className="showcaseBox" dangerouslySetInnerHTML={{__html:this.props.img}}/>);
+      return (<div style={centeredBox} className="showcaseBox" dangerouslySetInnerHTML={{__html:this.props.img}}/>);
     }
     return (
       <div style={centeredBox} className="showcaseBox">
