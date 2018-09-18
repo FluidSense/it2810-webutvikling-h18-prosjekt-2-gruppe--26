@@ -91,7 +91,7 @@ class Gallery extends Component {
     for (const key in selectedItems) {
       // Prevent checking proto
       if (key === 'sound') {
-        break;
+        continue;
       }
       if (selectedItems.hasOwnProperty(key) && key !== 'undefined') {
         // Check the correct place in cache and the content of it.
