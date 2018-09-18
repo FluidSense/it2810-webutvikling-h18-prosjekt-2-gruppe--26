@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 const centeredBox = {
   margin: '20px',
   border: '5px solid black',
+  width: '500px',
 };
 
 class Showcasebox extends Component {

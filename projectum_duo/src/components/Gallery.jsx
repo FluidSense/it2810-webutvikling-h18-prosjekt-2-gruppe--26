@@ -3,6 +3,7 @@ import Showcasebox from '../parts/Showcasebox.jsx';
 import Showcasetext from '../parts/Showcasetext.jsx';
 import {imgUrls, textUrls, soundUrls} from '../constants.js';
 import {GetJSON, GetRaw, APIResultInState} from '../api/core.js';
+import Soundplayer from "../parts/Soundplayer.jsx";
 import { cloneObject } from './../utils';
 
 
@@ -130,6 +131,7 @@ class Gallery extends Component {
         <div className="boxWrapper">
           <Showcasebox img={this.getSelectedFromCache('img')}/>
           <Showcasetext txt={this.getSelectedFromCache('txt')}/>
+          <Soundplayer songpath="/resources/audio/flags/russia.mp3"/>
         </div>
       )
     }
@@ -138,7 +140,7 @@ class Gallery extends Component {
           <div className="sidebarBack"></div>
           <div className="boxWrapper">
           <Showcasebox />
-          <Showcasetext text="Swiggity Swooty Here come dat Booty" name="Horsie" />
+          <Showcasetext text="Swiggity Swooty Here come dat BootySwiggity Swooty Here come dat BootySwiggity" name="Horsie" />
       </div>
     </React.Fragment>
     );
