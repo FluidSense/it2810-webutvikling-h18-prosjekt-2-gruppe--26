@@ -21,7 +21,9 @@ export default class MediaPicker extends React.Component {
         this.setState({
             activeID: id
         });
-        this.props.reportActiveId(this.props.title,id);
+        // 4 items under each category.
+        const randInt = Math.floor(Math.random() * 4);
+        this.props.reportActiveId(this.props.title,id,randInt);
     }
 
     createMediaPickOptions(){
@@ -36,7 +38,7 @@ export default class MediaPicker extends React.Component {
                     clickFunction={this.handleClick.bind(this)}
                     active={
                         this.props.selections ?
-                            this.props.selections === thisId
+                            this.props.selections[0] === thisId
                             : false
                         }
                 />);
