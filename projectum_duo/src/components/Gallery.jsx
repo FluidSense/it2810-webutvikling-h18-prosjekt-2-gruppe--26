@@ -90,6 +90,9 @@ class Gallery extends Component {
     const lists = {img:imgUrls,txt:textUrls,sound:soundUrls};
     for (const key in selectedItems) {
       // Prevent checking proto
+      if (key === 'sound') {
+        continue;
+      }
       if (selectedItems.hasOwnProperty(key) && key !== 'undefined') {
         // Check the correct place in cache and the content of it.
         // If it's not there, kill the for-loop since this will be called again when the selection is updated.
@@ -131,7 +134,7 @@ class Gallery extends Component {
         <div className="boxWrapper">
           <Showcasebox img={this.getSelectedFromCache('img')}/>
           <Showcasetext txt={this.getSelectedFromCache('txt')}/>
-          <Soundplayer songpath="/resources/audio/flags/russia.mp3"/>
+          <Soundplayer songpath={selectedItems.sound ? soundUrls[selectedItems.sound[0]][selectedItems.sound[1]]: undefined}/>
         </div>
       )
     }
