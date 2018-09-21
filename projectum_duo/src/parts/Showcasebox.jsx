@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 const centeredBox = {
   margin: '20px',
-  border: '5px solid black',
-  width: '500px',
+  marginRight: '70px',
+  width: '200px',
 };
 
 class Showcasebox extends Component {
@@ -12,9 +12,7 @@ class Showcasebox extends Component {
       return (<div style={centeredBox} className="showcaseBox" dangerouslySetInnerHTML={{__html:this.props.img}}/>);
     }
     return (
-      <div style={centeredBox} className="showcaseBox">
-        <img className="mainImage" src="/horse.png" alt="horse"/>
-      </div>
+      <div style={centeredBox} className="showcaseBox"></div>
     );
   }
 }

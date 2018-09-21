@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-
+  overflow-x: hidden;
 }
 
 /*SHOWCASE*/
@@ -8,12 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top:30px;
 }
-.mainImage {
-}
-.showcaseBox {
-}
-
 .showcaseText {
   max-width: 400px;
 }
@@ -38,8 +34,6 @@
 .chosenTabButton {
   background-color: #d2d2d2;
 }
-
-
 
 /*MediaPicker*/
 .wrapper2 {
@@ -67,12 +61,10 @@ This section will handle responiveness across different types of devices
 
 /* Laptops, Desktops. Large devices. */
 @media only screen and (min-width: 1200px) {
-  .mainImage{
-  }
   .showcaseBox{
-    background-color: red;
+    transform: scale(1.4);
+    transition: 0.7s;
   }
-
   .boxWrapper{
     flex-direction: row;
   }
@@ -80,13 +72,10 @@ This section will handle responiveness across different types of devices
 
 /* Mediumsized devices. Tablets, etc. */
 @media only screen and (max-width:  950px) {
-  .mainImage{
+  .showcaseBox {
+        transform: scale(0.7);
+        transition: 1.2s;
   }
-
-  .showcaseBox{
-    background-color: green;
-  }
-
   .boxWrapper{
     flex-direction: row;
   }
@@ -94,13 +83,13 @@ This section will handle responiveness across different types of devices
 
 /* Phones and smaller devices */
 @media only screen and (max-width: 845px) {
-  .mainImage{
-    max-width: 100%;
-    max-height: 100%;
-  }
   .showcaseBox{
-    flex-direction: column;
-    background-color: blue;
+    max-height: 50vh;
+    min-width: 50vw;
+  }
+
+  .showcaseBox{
+    transform: scale();
   }
 
   .boxWrapper{
@@ -119,7 +108,7 @@ This section will handle responiveness across different types of devices
     flex-direction:column;
     width:50px;
     z-index: 3;
-    height: 100vmax;
+    height: 150vmax;
   }
 
   .wrapper2 {
@@ -129,12 +118,12 @@ This section will handle responiveness across different types of devices
     font-size: 10px;
     width: 100%;
     justify-content: center;
-    padding-bottom: 15px;
     margin-left: 50px;
+    overflow-x: hidden;
     height: 135px;
   }
 
-  .sidebarBack {
-    display: none;
-  }
+body {
+  overflow: scroll;
+}
 }
