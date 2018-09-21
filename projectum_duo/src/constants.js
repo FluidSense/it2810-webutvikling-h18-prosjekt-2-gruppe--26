@@ -74,6 +74,6 @@ export const soundUrls = {
       memesSoundPath + 'illuminati.mp3',
       memesSoundPath + 'mlg.mp3',
       memesSoundPath + 'profanity.mp3',
-      memesSoundPath + 'triple.3',
+      memesSoundPath + 'triple.mp3',
     ],
   }
