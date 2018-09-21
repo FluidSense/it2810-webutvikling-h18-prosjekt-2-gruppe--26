@@ -1,4 +1,4 @@
-const path = (path, subPath='') => './../resources/' + path + subPath;
+const path = (path, subPath='') => './resources/' + path + subPath;
 const imgPath = (category) => path('graphics/') + category;
 const soundPath = (category) => path('audio/') + category;
 const txtPath = (category) => path('text/') + category;
