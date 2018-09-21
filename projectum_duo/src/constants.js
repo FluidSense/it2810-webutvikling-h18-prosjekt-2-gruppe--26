@@ -1,4 +1,4 @@
-const path = (path, subPath='') => './../resources/' + path + subPath;
+const path = (path, subPath='') => './resources/' + path + subPath;
 const imgPath = (category) => path('graphics/') + category;
 const soundPath = (category) => path('audio/') + category;
 const txtPath = (category) => path('text/') + category;
@@ -74,6 +74,6 @@ export const soundUrls = {
       memesSoundPath + 'illuminati.mp3',
       memesSoundPath + 'mlg.mp3',
       memesSoundPath + 'profanity.mp3',
-      memesSoundPath + 'triple.3',
+      memesSoundPath + 'triple.mp3',
     ],
   }
